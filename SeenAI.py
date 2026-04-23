@@ -1,21 +1,37 @@
+#include <stdio.h>
+int main(){
 
+    char operator;
+    
+    printf("enter the operator ['+', '-', '*', '/']: ");
+    scanf("%c", &operator);
 
-weight = int(input('Weight: '))
-unit = input('(L)bs or (K)g: ')
-if unit.upper() == "L":
-        converted = weight * 0.45
-        print(f"You are {converted} kilos")
-else:
-        converted = weight / 0.45
-        print(f"you are {converted} pounds")
+    double number1, number2;
+    printf("choose first number: ");
+    scanf("%lf", &number1);
 
-is_hot = False
-is_cold = True
+    printf("choose second number: ");
+    scanf("%lf", &number2);
 
-if is_hot:
-        print("it's a hot day")
-        print("drink some water")
-else:
-        print("it's a cold day")
-        print("wear warm clothes")
-print("enjoy lovely day")
+    int result;
+    switch(operator){
+     case '+':
+     result = number1 + number2;
+     break;
+
+     case '-':
+     result = number1 - number2;
+     break;
+
+     case '*':
+     result = number1 * number2;
+     break;
+
+     case '/':
+     result = number1 / number2;
+     break;
+    }
+    printf("result: %d", result);
+
+return 0;
+}
